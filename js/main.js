@@ -2,7 +2,7 @@
 const section = document.querySelector(".js-new-form");
 section.classList.remove("collapsed");
 let sectionList = document.querySelector(".js-list");
-let card1 = document.querySelector(".card");
+let card1 = document.querySelector(".card1");
 let card2 = document.querySelector(".card2");
 let card3 = document.querySelector(".card3");
 card1.innerHTML = `<article>
@@ -44,7 +44,8 @@ Es una maravilla acariciarle!
 </p>` ;
 
 const kittenUrl1 = "https://ychef.files.bbci.co.uk/976x549/p07ryyyj.jpg" ;
-const kittenName1 = "Anastacio" ;
+const kittenName1 = "Anastacio".toUpperCase() ;
+
 const kittenDesc1 = "Ruiseño, juguetón, le guta estar tranquilo y que nadie le moleste.Es una maravilla acariciarle!" ;
 const kittenUrl2 = "https://images.emedicinehealth.com/images/article/main_image/cat-scratch-disease.jpg" ;
 const kittenName2 = "Fiona" ;
@@ -84,3 +85,34 @@ src= ${kittenUrl3}
 <p class="card_description">
 ${kittenDesc3}
 </p>` ;
+
+
+const input_search_desc = document.querySelector('.js_in_search_desc') ;
+input_search_desc.value = 'cariñoso';
+const descrSearchText = input_search_desc.value;
+
+
+/*if( kittenDesc1.includes(descrSearchText) ) {
+    card1.innerHTML }
+  */
+  
+  
+
+   
+if( kittenDesc1.includes(descrSearchText) ) {
+  card1.classList.remove("hidden")
+} else {
+  card1.classList.add("hidden")
+} ; 
+
+if( kittenDesc2.includes(descrSearchText) ) {
+  card2.classList.remove("hidden")
+} else {
+  card2.classList.add("hidden")
+} ; 
+
+if( kittenDesc1.includes(descrSearchText) ) {
+  card3.classList.remove("hidden")
+} else {
+  card3.classList.add("hidden")
+} ; 
