@@ -124,7 +124,6 @@ const circle = document.querySelector(".fa-plus-circle") ;
 
 circle.addEventListener("click", (event) => {
   event.preventDefault()
-  console.log("dfdfddfsfsd")
   if (section.classList.contains("collapsed")) {
   section.classList.remove("collapsed")
 } else {
@@ -133,14 +132,38 @@ circle.addEventListener("click", (event) => {
 })
 
 
-const addButton = document.queryselector(".js-btn-add") ;
+const addButton = document.querySelector(".js-btn-add") ;
 const inputDesc = document.querySelector(".js-input-desc");
 const inputPhoto = document.querySelector(".js-input-photo");
 const inputName = document.querySelector(".js-input-name");
 const labelMesageError = document.querySelector(".js-label-error");
+const valueDesc = inputDesc.value;
+const valuePhoto = inputPhoto.value;
+const valueName = inputName.value;
+
+const searchDesc = document.querySelector('.js_in_search_desc');
+const searchType = document.querySelector('.js_in_search_type');
+const searchButton = document.querySelector('.js_in_search_button');
+const searchError = document.querySelector('.js-label-error-search');
+const valueSearchDesc = searchDesc.value;
+const valueSearchType = searchType.value;
+const btnCancel = document.querySelector('.js-btn-cancel');
 
 addButton.addEventListener("click", (event) => {
   event.preventDefault()
+  if (valueDesc === "" && valuePhoto === "" && valueName === "") {
+      labelMesageError.innerHTML="Debe rellenar todos los valores";
+}})
+
+searchButton.addEventListener('click', (event)=>{
+  event.preventDefault()
+  if ( valueSearchDesc === "" &&  valueSearchType === "") {
+    searchError.innerHTML="Debe rellenar todos los valores";
+}})
+btnCancel.addEventListener('click',(event)=>{
+  event.preventDefault();
+  section.classList.add('collapsed');
+  location.reload();
 
 })
 
@@ -160,4 +183,4 @@ if (activableSection.classList.contains("hidden")) {
   // Si no, en caso contrario
   // Añade la clase hidden
   activableSection.classList.add("hidden");
-}*/
+} */
