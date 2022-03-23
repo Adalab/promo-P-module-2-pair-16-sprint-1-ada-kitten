@@ -101,13 +101,6 @@ li {
 .data {
   padding: 20px;
 }
-
-.cardview {
-}
-
-.listview {
-}
-
 .data .list {
   display: flex;
   flex-direction: row;
