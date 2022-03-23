@@ -1,6 +1,6 @@
 'use strict';
 const section = document.querySelector(".js-new-form");
-section.classList.remove("collapsed");
+
 let sectionList = document.querySelector(".js-list");
 let card1 = document.querySelector(".card1");
 let card2 = document.querySelector(".card2");
@@ -87,14 +87,14 @@ ${kittenDesc3}
 </p>` ;
 
 
-const input_search_desc = document.querySelector('.js_in_search_desc') ;
+/*const input_search_desc = document.querySelector('.js_in_search_desc') ;
 input_search_desc.value = 'cariñoso';
 const descrSearchText = input_search_desc.value;
 
 
 /*if( kittenDesc1.includes(descrSearchText) ) {
     card1.innerHTML }
-  */
+  
   
   
 
@@ -115,4 +115,49 @@ if( kittenDesc1.includes(descrSearchText) ) {
   card3.classList.remove("hidden")
 } else {
   card3.classList.add("hidden")
-} ; 
+} ; */
+
+
+const circle = document.querySelector(".fa-plus-circle") ;
+
+
+
+circle.addEventListener("click", (event) => {
+  event.preventDefault()
+  console.log("dfdfddfsfsd")
+  if (section.classList.contains("collapsed")) {
+  section.classList.remove("collapsed")
+} else {
+  section.classList.add("collapsed")
+}
+})
+
+
+const addButton = document.queryselector(".js-btn-add") ;
+const inputDesc = document.querySelector(".js-input-desc");
+const inputPhoto = document.querySelector(".js-input-photo");
+const inputName = document.querySelector(".js-input-name");
+const labelMesageError = document.querySelector(".js-label-error");
+
+addButton.addEventListener("click", (event) => {
+  event.preventDefault()
+
+})
+
+
+
+
+
+
+/*
+const activableSection = document.querySelector(".activable-section");
+
+// Si contiene la clase hidden
+if (activableSection.classList.contains("hidden")) {
+  // Elimina la clase
+  activableSection.classList.remove("hidden");
+} else {
+  // Si no, en caso contrario
+  // Añade la clase hidden
+  activableSection.classList.add("hidden");
+}*/
