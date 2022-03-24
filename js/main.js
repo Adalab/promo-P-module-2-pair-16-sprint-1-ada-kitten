@@ -120,7 +120,7 @@ if( kittenDesc1.includes(descrSearchText) ) {
 
 const circle = document.querySelector(".fa-plus-circle") ;
 
-
+/*
 
 circle.addEventListener("click", (event) => {
   event.preventDefault()
@@ -129,7 +129,7 @@ circle.addEventListener("click", (event) => {
 } else {
   section.classList.add("collapsed")
 }
-})
+}) */
 
 
 const addButton = document.querySelector(".js-btn-add") ;
@@ -148,6 +148,7 @@ const searchError = document.querySelector('.js-label-error-search');
 const valueSearchDesc = searchDesc.value;
 const valueSearchType = searchType.value;
 const btnCancel = document.querySelector('.js-btn-cancel');
+/*
 
 addButton.addEventListener("click", (event) => {
   event.preventDefault()
@@ -166,11 +167,31 @@ btnCancel.addEventListener('click',(event)=>{
   location.reload();
 
 })
+*/
+
+const newFormElement = document.querySelector('.js-new-form');
 
 
-
-
-
+    function handleClickNewCatForm(event){
+     event.preventDefault()
+    if (newFormElement.classList.contains("collapsed")) {
+      newFormElement.classList.remove("collapsed")
+  } else {
+    newFormElement.classList.add("collapsed")
+    }}
+circle.addEventListener('click',handleClickNewCatForm);
+/*
+function showNewCatForm() {
+  circle.addEventListener('click',(event)=> {
+    newFormElement.classList.remove('collapsed')
+  });
+  function hideNewCatForm(){
+    console.log('holiiis');
+    circle.addEventListener('click',(event)=> {
+      newFormElement.classList.add('collapsed')
+    });
+ }
+} */
 
 /*
 const activableSection = document.querySelector(".activable-section");
