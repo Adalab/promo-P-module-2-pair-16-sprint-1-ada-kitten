@@ -205,3 +205,18 @@ if (activableSection.classList.contains("hidden")) {
   // Añade la clase hidden
   activableSection.classList.add("hidden");
 } */
+let url = inputPhoto.value;
+let desc= inputDesc.value;
+let name = inputName.value;
+
+function renderKitten(url, desc, name){
+  sectionList.innerHTML += `<li class='card'> ${url}, ${desc},${name}
+  </li>;`
+};
+circle.addEventListener('click',renderKitten);
+console.log(sectionList.innerHTML);
+console.log(renderKitten);
+
+
+inputPhoto.addEventListener('change'() => {
+  url.innerHTML = inputPhoto.value});
